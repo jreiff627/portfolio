@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica Reiff Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <ul>
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="reflections.html">Reflections</a></li> 
+        <li><a href="attributes.html">Citations</a></li> 
+    </ul>
+</nav>
+
+<!-- HOME / Intro -->
+<section id="intro" class="intro section">
+    <img src="assets/images/intro_pic.jpg" alt="Background" class="intro-bg-image">
+    <div class="intro-content">
+        <h1>Jessica Reiff</h1>
+        <p>Hi! I’m Jessica, a Senior Electrical Engineering student at Iowa State University 
+            with a passion for embedded systems, controls, and all things hands-on.</p>
+        <div class="intro-buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+ <section id="about" class="section about">
+    <div class="about-content">
+
+        <!-- Left images -->
+        <div class="about-photos left-photos">
+            <img src="assets/images/cats.jpg" alt="My cats">
+            <img src="assets/images/mona_lisa.jpg" alt="Me skiing">
+        </div>
+
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p> When I’m not tinkering with microcontrollers or debugging firmware, you’ll probably find me:
+            </p>
+            <ul>
+                <li>Exploring the outdoors, whether it’s hiking trails or skiing down a slope </li>
+                <li>Traveling and visiting all the tourist spots </li>
+                <li>Spending time with my mischievous cats</li>
+                <li>Trying new hobbies and challenges, curiosity keeps me going!</li>
+            </ul>
+            <p>I love blending creativity with technical skills, whether that’s designing a quirky cow-shaped PCB, 
+                building a UAV flight controller, or developing a new control algorithm. I believe that problem-solving 
+                is not just a skill, it’s a way to explore the world and learn something new every day.
+            </p>
+        </div>
+
+        <!-- Right images -->
+        <div class="about-photos right-photos">
+            <img src="assets/images/skiing.jpg" alt="Me with Mona Lisa">
+            <img src="assets/images/hiking.jpg" alt="Me hiking">
+        </div>
+
+    </div>
+</section>
+
+<!-- WORK EXPERIENCE -->
+<section id="experience" class="section experience">
+    <h2>Professional Experience</h2>
+    <div class="experience-list">
+
+        <!-- AthenaGTX Intern -->
+        <div class="experience-card">
+            <h3>Embedded Intern - AthenaGTX, Johnston, IA</h3>
+            <p class="experience-date">May 2025 – Aug 2025 </p>
+            <ul>
+                <li>Developed embedded C firmware for device prototypes with motion-tracking algorithms using BMI323 and BLE communication with BMD350.</li>
+                <li>Updated legacy firmware with dual-color LED indicators and optimized pump control.</li>
+                <li>Prototyped and debugged hardware/firmware interactions; developed an Android app in Java to test BLE connectivity and resolve UI synchronization issues.</li>
+                <li>Collaborated with hardware and mechanical teams on PCB design and produced technical documentation.</li>
+            </ul>
+        
+        <div class="button-center">
+            <a href="experience/athena.html" class="btn">Learn More</a>
+        </div>
+        </div>
+
+        <!-- MATLAB Student Ambassador -->
+        <div class="experience-card">
+            <h3>MATLAB Student Ambassador - MathWorks, Ames, IA</h3>
+            <p class="experience-date">Jan 2025 – Present</p>
+            <ul>
+                <li>Coordinated workshops and seminars to demonstrate MATLAB’s capabilities, enhancing students’ technical skills.</li>
+                <li>Provided peer support and troubleshooting for MATLAB-related issues and optimization best practices.</li>
+                <li>Acted as liaison between MathWorks and the university, increasing MATLAB adoption through targeted outreach.</li>
+            </ul>
+
+            <div class="button-center">
+                <a href="experience/mathworks.html" class="btn">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Undergraduate Research Assistant -->
+        <div class="experience-card">
+            <h3>Undergraduate Research Assistant - Iowa State College of Engineering, Ames, IA</h3>
+            <p class="experience-date">Mar 2025 – Present</p>
+            <ul>
+                <li>Program autonomous driving behaviors on the F1TENTH platform using ROS2, with testing in simulator and real-world deployment on miniature racecars.</li>
+                <li>Design control and planning algorithms for obstacle avoidance, path following, and racing strategies.</li>
+                <li>Implement sensor fusion techniques with LiDAR, IMU, and cameras to improve localization accuracy using C++ and Python libraries.</li>
+            </ul>
+
+
+            <div class="button-center">
+                <a href="experience/research.html" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+
+
+        <!-- EE 3330 UAV Flight Controller -->
+        <div class="project-card">
+            <h3>EE 3330 Final Project: UAV Flight Controller</h3>
+            <img src="assets/images/ee3330.png" alt="EE 3330 UAV Flight Controller Board">
+            <p class="project-date">December 2025</p>
+            <p class="project-description">
+                Custom UAV flight controller using STM32H7 MCU, IMU, barometer, and USB-C interface for real-time flight control.
+            </p>
+            <a href="projects/ee3330.html" class="btn">Learn More</a>
+        </div>
+
+        <!-- EE4140 RF Project -->
+        <div class="project-card">
+            <h3>EE 4140 Final Project: RF Board operating at 1 GHz </h3>
+            <img src="assets/images/ee4140.png" alt="EE 4140 Final Board Image">
+            <p class="project-date">December 2025</p>
+            <p class="project-description">
+             Final project combining DC Bias, Amplifier, Oscillator, and Resonator circuits into a single RF board.
+            </p>
+            <a href="projects/ee4140.html" class="btn">Learn More</a>
+        </div>
+
+        <!-- Cow PCB Project Card -->
+        <div class="project-card">
+            <h3>IEEE Workshop: Cow-Shaped Random Number Generator PCB</h3>
+            <img src="assets/images/cow_pcb.png" alt="Cow PCB Image">
+            <p class="project-date">December 2025</p>
+            <p class="project-description">
+            A custom cow-shaped PCB built during an IEEE workshop. The board is fully functional and 
+            acts as a random number generator, lighting up two sets of 7 LEDs like rolling two six-sided dice. 
+            Each LED set corresponds to a die, and the extra LED in each set is used for formatting the dice faces. 
+            This project combined creativity with hands-on PCB design, soldering, and testing skills.
+            </p>
+            <a href="projects/cow_pcb.html" class="btn">Learn More</a>
+        </div>
+
+        <!-- CPRE 2880 Roomba Project -->
+        <div class="project-card">
+            <h3>CPRE 2880 Final Project: RescueBot</h3>
+            <img src="assets/images/cpre2880.png" alt="CPRE 2880 Project Image">
+            <p class="project-date">December 2024</p>
+            <p class="project-description">
+                A final project for CPRE 2880, exploring embedded systems and controls. RescueBot is an assistive robotic navigation system designed to help visually impaired individuals navigate indoor spaces safely.
+            It integrates real-time sensor feedback, audio interaction, and voice commands on an iRobot Create platform.
+            </p>
+            <a href="projects/cpre2880.html" class="btn">Learn More</a>
+        </div>
+
+
+
+    </div>
+</section>
+
+
+<!-- RESUME -->
+<section id="resume" class="section resume">
+    <h2>Resume</h2>
+    <p>Here is a brief overview of my skills and experience. You can also download my full resume below.</p>
+
+    <!-- Technical Skills -->
+    <div class="skills-container">
+
+        <!-- Hardware & Lab -->
+        <div class="skills-category">
+            <h4>Hardware & Lab</h4>
+            <div class="skills-list">
+                <div class="skill-box">
+                    <img src="assets/images/circuit.png" alt="Circuit Icon">
+                    Circuit Assembly & Troubleshooting
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/oscilloscope.png" alt="Oscilloscope Icon">
+                    Oscilloscopes
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/pcb.png" alt="PCB Icon">
+                    PCB Design & Prototyping
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/soldering.png" alt="Soldering Icon">
+                    Soldering
+                </div>
+            </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="skills-category">
+            <h4>Programming Languages</h4>
+            <div class="skills-list">
+                <div class="skill-box">
+                    <img src="assets/images/c.png" alt="C Icon">
+                    C/C++
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/ros.png" alt="ROS 2 Icon">
+                    ROS 2
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/vhdl.png" alt="VHDL Icon">
+                    VHDL
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/verilog.png" alt="Verilog Icon">
+                    Verilog
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/matlab.png" alt="MATLAB Icon">
+                    MATLAB/Simulink
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/python.png" alt="Python Icon">
+                    Python
+                </div>
+            </div>
+        </div>
+
+        <!-- Design & tools -->
+        <div class="skills-category">
+            <h4>Design & Tools </h4>
+            <div class="skills-list">
+                <div class="skill-box">
+                    <img src="assets/images/ads.png" alt="ADS Icon">
+                    ADS
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/cadence.png" alt="Cadence Icon">
+                    Cadence
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/kicad.jpeg" alt="KiCad Icon">
+                    KiCad
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/circuit.png" alt="circuit Icon">
+                    LTSpice
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/questasim.png" alt="Questasim Icon">
+                    QuestaSim
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Download button -->
+    <a href="assets/jessicaReiff_resume.pdf" download="jessicaReiff_resume.pdf" class="btn">Download Resume (PDF)</a>
+
+    <!-- Embedded preview -->
+    <div class="resume-preview">
+        <a href="assets/jessicaReiff_resume.pdf" target="_blank">
+            <img src="assets/images/resume_preview.png" alt="Resume Preview">
+        </a>
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <hr>
+
+    <div class="contact-grid">
+
+        <!-- Email -->
+        <div class="contact-card">
+            <h4>Email</h4>
+            <img src="assets/images/email.png" alt="Email Icon" class="contact-icon">
+            <a href="mailto:jreiff@iastate.edu"></a>
+            <p><em>jreiff@iastate.edu</em></p>
+
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="contact-card">
+            <h4>LinkedIn</h4>
+            <a href="https://www.linkedin.com/in/jessica-reiff1/" target="_blank">
+                <img src="assets/images/linkedin.png" alt="LinkedIn Icon" class="contact-icon">
+            </a>
+            <p><em>https://www.linkedin.com/in/jessica-reiff1/</em></p>
+        </div>
+
+        <!-- GitHub -->
+        <div class="contact-card">
+            <h4>GitHub</h4>
+            <a href="https://github.com/jreiff627" target="_blank">
+                <img src="assets/images/github.png" alt="GitHub Icon" class="contact-icon">
+            </a>
+            <p><em>https://github.com/jreiff627</em></p>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-card">
+            <h4>Phone</h4>
+            <img src="assets/images/phone.png" alt="Phone Icon" class="contact-icon">
+            <a href="tel:+4022767854"></a>
+            <p><em>(402)276-7854</em></p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Jessica Reiff
+    </div>
+</section>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
