@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EE 3330 UAV Flight Controller - Jessica Reiff</title>
+    <title>CPRE 3810 MIPS Processor - Jessica Reiff</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -24,23 +24,23 @@
 
 <!-- PROJECT DETAIL SECTION -->
 <section class="section project-detail">
-    <h2>EE 3330 Final Project: UAV Flight Controller</h2>
-    <p class="project-date">Dec 2025</p>
+    <h2>CPRE 3810 Final Project: MIPS Processor</h2>
+    <p class="project-date">May 2025</p>
 
     <div class="project-top">
-        <img src="../assets/images/ee3330.png" alt="EE 3330 UAV Flight Controller">
+        <img src="../assets/images/cpre3810.png" alt="CPRE 3810 MIPS Processor">
         <p>
-            Designed and implemented a custom UAV flight controller integrating STM32H7 MCU, IMU, barometer, and USB-C power/data interface. The controller processes sensor data in real-time to drive ESCs and motors.
+            In CPRE 3810, our team designed, built, and analyzed three MIPS processor architectures: Single Cycle, Software-Scheduled Pipeline, and Hardware-Scheduled Pipeline. This project gave me hands-on experience with VHDL design, pipeline optimization, and performance benchmarking.
         </p>
     </div>
 
     <div class="project-info">
 
-        <!-- Your Role -->
+        <!-- My Role -->
         <div class="project-section">
             <h3>My Role</h3>
             <p>
-                Worked on PCB design, schematic choices, microcontroller setup, sensor integration, and system testing.
+                Collaborated with Claire Lewis to design, implement, and test all three processor architectures. Focused on pipeline stages, hazard detection, and performance optimization.
             </p>
         </div>
 
@@ -48,12 +48,12 @@
         <div class="project-section">
             <h3>Skills / Knowledge Gained</h3>
             <ul>
-                <li>Embedded MCU design with STM32H7</li>
-                <li>Sensor integration (IMU, barometer)</li>
-                <li>PCB layout for compact flight controllers</li>
-                <li>Power regulation and voltage distribution</li>
-                <li>Debugging and testing complex systems</li>
-                <li>Using I²C, UART, PWM for communication and control</li>
+                <li>VHDL design and debugging</li>
+                <li>MIPS architecture and instruction flow</li>
+                <li>Single-cycle and pipelined processor implementation</li>
+                <li>Pipeline hazard detection and forwarding logic</li>
+                <li>Benchmarking and performance analysis using MARS and ModelSim</li>
+                <li>Collaboration and merge conflict resolution in Git</li>
             </ul>
         </div>
 
@@ -61,19 +61,20 @@
         <div class="project-section">
             <h3>Resources Used</h3>
             <ul>
-                <li>STM32CubeIDE and STM32CubeProgrammer</li>
-                <li>Datasheets and application notes for MCU and sensors</li>
-                <li>Lab test equipment: multimeter, power supply</li>
-                <li>PCB fabrication and soldering tools</li>
+                <li>VHDL and ModelSim for simulation</li>
+                <li>MARS MIPS simulator for instruction counting</li>
+                <li>Git for version control</li>
+                <li>Course lab documents and prior processor designs</li>
             </ul>
         </div>
- <!-- Lab Report Slideshow -->
+
+        <!-- Lab Report Slideshow -->
         <div class="project-section">
             <h3>Lab Report</h3>
             <div class="pdf-viewer">
                 <button class="nav-btn left" onclick="prevPage()">&#10094;</button>
                 
-                <img id="pdfPage" src="../assets/ee4140_report/page1.jpg" alt="Lab Report Page">
+                <img id="pdfPage" src="../assets/cpre3810_report/page1.jpg" alt="Lab Report Page">
 
                 <button class="nav-btn right" onclick="nextPage()">&#10095;</button>
             </div>
@@ -86,12 +87,12 @@
 
 <!-- Slideshow Script -->
 <script>
-    const totalPages = 22; 
+    const totalPages = 8; // CHANGE this to match number of report pages
     let currentPage = 1;
 
     function updatePage() {
         document.getElementById("pdfPage").src =
-            `../assets/ee3330_report/page${currentPage}.jpg`;
+            `../assets/cpre3810_report/page${currentPage}.jpg`;
     }
 
     function nextPage() {

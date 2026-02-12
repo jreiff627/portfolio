@@ -258,6 +258,7 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 0;
     gap: 20px;
 }
 
@@ -267,11 +268,16 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     max-width: 350px;
+    min-width: 300px;
     text-align: center;
     padding: 15px;
     display: flex;
     flex-direction: column;
+    flex: 0 0 auto;
     gap: 10px;
+}
+.project-list .project-card:first-child {
+   margin-left: 800px; 
 }
 
 .project-card img {
@@ -372,6 +378,69 @@ nav ul li a:hover {
 /* Back button */
 .project-detail .btn {
     margin-top: 40px;
+}
+/* Projects section */
+.projects-wrapper {
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    /*padding: 20px 0; optional spacing */
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: nowrap; /* horizontal scroll */
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+
+/* Hide scrollbar for Firefox */
+.project-list {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.3) transparent;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-btn.left {
+    left: 5px;
+}
+
+.scroll-btn.right {
+    right: 5px;
+}
+
+/* Project card fixes */
+.project-card {
+    flex: 0 0 auto; /* important: prevents cards from shrinking */
+    min-width: 300px; /* adjust card width */
+    max-width: 350px;
+}
+
+/* Optional: small screens */
+@media (max-width: 768px) {
+    .project-card {
+        min-width: 250px;
+    }
 }
 
 
@@ -631,4 +700,143 @@ nav ul li a:hover {
     border-radius: 10px;      
     box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
 }
-    
+
+.pdf-viewer {
+    position: relative;
+    max-width: 700px;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-viewer img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.nav-btn {
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+.left {
+    left: -50px;
+}
+
+.right {
+    right: -50px;
+}
+
+/* Reflections Section */
+.reflections.section {
+    padding: 40px 20px 60px 20px; /* reduce top padding for less space */
+    text-align: center;
+    background-color: #40798C;
+    color: #FFD9DA;
+}
+
+/* Section heading */
+.reflections.section h1 {
+    margin: 0 0 20px 0;  /* remove top margin, keep a small bottom margin */
+    font-size: 2.5em;
+    color: #FFCD00;
+}
+
+/* Section description paragraph */
+.reflections.section p {
+    margin: 0 0 40px 0;  /* reduce space below intro text */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Reflections wrapper */
+.reflections-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* space between cards */
+    max-width: 900px;
+    margin: 0 auto; /* center wrapper */
+}
+
+/* Individual reflection cards */
+.reflection-card {
+    background-color: #FFD9DA; /* pink card */
+    color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    text-align: left;
+    max-height: 500px;  
+    overflow-y: auto;
+    justify-content: flex-start;   
+}
+
+.reflection-card-pdf {
+    background-color: #FFD9DA; /* pink card */
+    color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    text-align: left;
+    max-height: 500px;  
+    overflow-y: auto;
+    justify-content: flex-start;
+    max-height: 100%;    
+}
+.reflection-card-pdf h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #89023E;
+}
+
+.reflection-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #89023E;
+}
+
+.reflection-card .reflection-text p {
+    margin-bottom: 15px; /* space between paragraphs */
+    line-height: 1.6;
+}
+
+.reflection-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.reflection-card::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+
+.reflection-card::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .reflection-card {
+        padding: 20px;
+    }
+
+    .reflections.section h1 {
+        font-size: 2em;
+    }
+}
+
+
+

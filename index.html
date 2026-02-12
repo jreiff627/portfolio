@@ -130,58 +130,76 @@
 <!-- PROJECTS -->
 <section id="projects" class="section projects">
     <h2>Projects</h2>
-    <div class="project-list">
+    <div class="projects-wrapper">
+        <button class="scroll-btn left" onclick="scrollProjects(-300)">&#10094;</button>
 
+        <div class="project-list">
 
         <!-- EE 3330 UAV Flight Controller -->
-        <div class="project-card">
-            <h3>EE 3330 Final Project: UAV Flight Controller</h3>
-            <img src="assets/images/ee3330.png" alt="EE 3330 UAV Flight Controller Board">
-            <p class="project-date">December 2025</p>
-            <p class="project-description">
-                Custom UAV flight controller using STM32H7 MCU, IMU, barometer, and USB-C interface for real-time flight control.
-            </p>
-            <a href="projects/ee3330.html" class="btn">Learn More</a>
-        </div>
+            <div class="project-card">
+                <h3>EE 3330 Final Project: UAV Flight Controller</h3>
+                <img src="assets/images/ee3330.png" alt="EE 3330 UAV Flight Controller Board">
+                <p class="project-date">December 2025</p>
+                <p class="project-description">
+                    Custom UAV flight controller using STM32H7 MCU, IMU, barometer, and USB-C interface for real-time flight control.
+                </p>
+                <a href="projects/ee3330.html" class="btn">Learn More</a>
+            </div>
 
         <!-- EE4140 RF Project -->
-        <div class="project-card">
-            <h3>EE 4140 Final Project: RF Board operating at 1 GHz </h3>
-            <img src="assets/images/ee4140.png" alt="EE 4140 Final Board Image">
-            <p class="project-date">December 2025</p>
-            <p class="project-description">
-             Final project combining DC Bias, Amplifier, Oscillator, and Resonator circuits into a single RF board.
-            </p>
-            <a href="projects/ee4140.html" class="btn">Learn More</a>
-        </div>
+            <div class="project-card">
+                <h3>EE 4140 Final Project: RF Board operating at 1 GHz </h3>
+                <img src="assets/images/ee4140.png" alt="EE 4140 Final Board Image">
+                <p class="project-date">December 2025</p>
+                <p class="project-description">
+                Final project combining DC Bias, Amplifier, Oscillator, and Resonator circuits into a single RF board.
+                </p>
+                <a href="projects/ee4140.html" class="btn">Learn More</a>
+            </div>
 
         <!-- Cow PCB Project Card -->
-        <div class="project-card">
-            <h3>IEEE Workshop: Cow-Shaped Random Number Generator PCB</h3>
-            <img src="assets/images/cow_pcb.png" alt="Cow PCB Image">
-            <p class="project-date">December 2025</p>
-            <p class="project-description">
-            A custom cow-shaped PCB built during an IEEE workshop. The board is fully functional and 
-            acts as a random number generator, lighting up two sets of 7 LEDs like rolling two six-sided dice. 
-            Each LED set corresponds to a die, and the extra LED in each set is used for formatting the dice faces. 
-            This project combined creativity with hands-on PCB design, soldering, and testing skills.
-            </p>
-            <a href="projects/cow_pcb.html" class="btn">Learn More</a>
-        </div>
+            <div class="project-card">
+                <h3>IEEE Workshop: Cow-Shaped Random Number Generator PCB</h3>
+                <img src="assets/images/cow_pcb.png" alt="Cow PCB Image">
+                <p class="project-date">December 2025</p>
+                <p class="project-description">
+                A custom cow-shaped PCB built during an IEEE workshop. The board is fully functional and 
+                acts as a random number generator, lighting up two sets of 7 LEDs like rolling two six-sided dice. 
+                Each LED set corresponds to a die, and the extra LED in each set is used for formatting the dice faces. 
+                This project combined creativity with hands-on PCB design, soldering, and testing skills.
+                </p>
+                <a href="projects/cow_pcb.html" class="btn">Learn More</a>
+            </div>
+
+        
+        <!-- CPRE 3810 Final Project -->
+            <div class="project-card">
+                <h3>CPRE 3810 Final Project: Mips Processor</h3>
+                <img src="assets/images/cpre3810.png" alt="CPRE 3810 Project Image">
+                <p class="project-date">May 2025</p>
+                <p class="project-description">
+                    A final project for CPRE 3810, focused on processor design and pipeline optimization. The project involved implementing 
+                    three MIPS processors: Single-Cycle, Software-Scheduled Pipeline, and Hardware-Scheduled Pipeline. 
+                    It provided hands-on experience with VHDL design, hazard detection, performance benchmarking, and 
+                    optimization of processor architectures.
+                </p>
+                <a href="projects/cpre3810.html" class="btn">Learn More</a>
+            </div>
 
         <!-- CPRE 2880 Roomba Project -->
-        <div class="project-card">
-            <h3>CPRE 2880 Final Project: RescueBot</h3>
-            <img src="assets/images/cpre2880.png" alt="CPRE 2880 Project Image">
-            <p class="project-date">December 2024</p>
-            <p class="project-description">
-                A final project for CPRE 2880, exploring embedded systems and controls. RescueBot is an assistive robotic navigation system designed to help visually impaired individuals navigate indoor spaces safely.
-            It integrates real-time sensor feedback, audio interaction, and voice commands on an iRobot Create platform.
-            </p>
-            <a href="projects/cpre2880.html" class="btn">Learn More</a>
+            <div class="project-card">
+                <h3>CPRE 2880 Final Project: RescueBot</h3>
+                <img src="assets/images/cpre2880.png" alt="CPRE 2880 Project Image">
+                <p class="project-date">December 2024</p>
+                <p class="project-description">
+                    A final project for CPRE 2880, exploring embedded systems and controls. RescueBot is an assistive robotic navigation system designed to help visually impaired individuals navigate indoor spaces safely.
+                It integrates real-time sensor feedback, audio interaction, and voice commands on an iRobot Create platform.
+                </p>
+                <a href="projects/cpre2880.html" class="btn">Learn More</a>
+            </div>
         </div>
-
-
+        <!-- Right Scroll Button -->
+        <button class="scroll-btn right" onclick="scrollProjects(300)">&#10095;</button>
 
     </div>
 </section>

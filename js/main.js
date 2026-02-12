@@ -7,3 +7,7 @@ console.log("Portfolio loaded successfully!");
 // - Navbar highlight on scroll
 // - Fade-in animations
 // - Interactive project cards
+function scrollProjects(distance) {
+    const container = document.querySelector('.project-list');
+    container.scrollBy({ left: distance, behavior: 'smooth' });
+}
