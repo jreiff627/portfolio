@@ -111,7 +111,7 @@
         <button class="nav-btn left" onclick="prevPage()">&#8249;</button>
 
         <!-- Display page 1 initially -->
-        <img id="pdfPage" src="../assets/ethics_paper/page1.jpg" alt="Ethics Paper Page" style="max-width: 100%; border-radius: 10px;">
+        <img id="pdfPage" src="assets/ethics_paper/page1.jpg" alt="Ethics Paper Page" style="max-width: 100%; border-radius: 10px;">
 
         <button class="nav-btn right" onclick="nextPage()">&#8250;</button>
     </div>
@@ -130,7 +130,7 @@
 
     function updatePage() {
         document.getElementById("pdfPage").src =
-            `../assets/ethics_paper/page${currentPage}.jpg`;
+            `assets/ethics_paper/page${currentPage}.jpg`;
     }
 
     function nextPage() {
