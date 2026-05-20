@@ -60,17 +60,19 @@
         <div class="project-section">
             <h3>My Role: Firmware & Controls Engineer</h3>
             <p>
-                I served on the firmware team with a focus on flight control algorithms and acted 
-                as the primary liaison between the hardware and firmware teams. My responsibilities included:
+                I worked on the embedded firmware and flight controls stack for OSCAR, focusing on
+                real-time sensor processing, orientation estimation, and hardware integration on STM32
+                microcontrollers. My work centered around IMU configuration, quaternion-based sensor fusion,
+                ExpressLRS receiver integration, and bridging low-level sensor data into the flight control system.
             </p>
 
             <ul>
-                <li>Developing and tuning closed-loop attitude control algorithms (PID-based)</li>
-                <li>Implementing real-time sensor acquisition and filtering</li>
-                <li>Integrating IMU and environmental sensors with STM32 firmware</li>
-                <li>Debugging hardware–firmware interface issues</li>
-                <li>Ensuring reliable register-level communication between peripherals</li>
-                <li>Supporting system validation and flight testing</li>
+                <li>Configured and validated IMU, barometer, and magnetometer sensors over SPI and I2C on STM32 hardware</li>
+                <li>Implemented quaternion-based orientation tracking using Madgwick sensor fusion algorithms</li>
+                <li>Developed real-time sensor acquisition pipelines for accelerometer, gyroscope, and magnetometer data</li>
+                <li>Integrated ExpressLRS receiver communication for low-latency pilot command input</li>
+                <li>Debugged register-level hardware communication issues using oscilloscopes and logic analyzers</li>
+                <li>Collaborated closely with hardware and software teams to validate end-to-end control functionality</li>
             </ul>
         </div>
 
@@ -78,12 +80,14 @@
         <div class="project-section">
             <h3>Technical Contribution</h3>
             <ul>
-                <li>Implemented IMU data processing pipeline using BMI323 sensor</li>
-                <li>Designed control loops validated in MATLAB & Simulink before firmware deployment</li>
-                <li>Developed firmware modules in STM32CubeIDE using HAL/LL drivers</li>
-                <li>Analyzed datasheets to configure SPI/I2C sensor communication</li>
-                <li>Contributed to system-level architecture decisions for modularity and scalability</li>
-            </ul>
+                <li>Implemented SPI communication and initialization sequences for the ICM-40609 IMU</li>
+                <li>Developed sensor drivers and configuration routines for the ENS220 barometer and MMC5983MA magnetometer</li>
+                <li>Implemented quaternion calculations and Madgwick sensor fusion for real-time orientation estimation</li>
+                <li>Integrated ExpressLRS communication over UART for real-time remote control input</li>
+                <li>Worked with FreeRTOS task structures and synchronization concepts for embedded concurrency</li>
+                <li>Validated sensor communication and timing behavior using oscilloscopes</li>
+                <li>Developed embedded firmware in STM32CubeIDE using STM32 HAL/LL drivers</li>
+                <li>Performed datasheet-driven peripheral configuration and debugging at the register level</li>
             </ul>
         </div>
 
@@ -91,25 +95,47 @@
         <div class="project-section">
             <h3>Skills & Knowledge Gained</h3>
             <ul>
-                <li>Embedded C development on STM32 microcontrollers</li>
-                <li>Real-time systems design</li>
-                <li>Closed-loop control systems (PID tuning & stability analysis)</li>
-                <li>Sensor fusion fundamentals</li>
-                <li>Hardware–software integration</li>
-                <li>Professional engineering documentation & version control</li>
-                <li>Cross-disciplinary technical communication</li>
+                <li>Embedded C firmware development</li>
+                <li>STM32 microcontroller development</li>
+                <li>Real-time embedded systems and task scheduling</li>
+                <li>Quaternion mathematics and orientation estimation</li>
+                <li>Madgwick sensor fusion algorithms</li>
+                <li>SPI, I2C, UART, and USB communication protocols</li>
+                <li>IMU integration and inertial sensing</li>
+                <li>Hardware-software co-design and debugging</li>
+                <li>Control systems and feedback loop fundamentals</li>
+                <li>Datasheet-driven embedded development</li>
+                <li>Embedded systems debugging with oscilloscopes and logic analyzers</li>
+                <li>Cross-disciplinary engineering collaboration</li>
             </ul>
         </div>
+        
+        <div class="project-section">
+            <h3>Controls & Sensor Fusion</h3>
+            <p>
+                A major focus of my work involved transforming raw IMU sensor data into stable
+                orientation estimates for flight control applications. This included implementing
+                quaternion-based orientation tracking and integrating Madgwick sensor fusion algorithms
+                using accelerometer, gyroscope, and magnetometer data streams.
+            </p>
 
+            <ul>
+                <li>Implemented quaternion orientation estimation</li>
+                <li>Integrated Madgwick AHRS sensor fusion algorithms</li>
+                <li>Worked with real-time angular velocity and acceleration data</li>
+                <li>Helped support high-frequency flight stabilization loops</li>
+            </ul>
+        </div>
         <!-- Tools & Technologies -->
         <div class="project-section">
             <h3>Tools & Technologies</h3>
             <ul>
                 <li>STM32CubeIDE</li>
-                <li>MATLAB</li>
-                <li>Simulink</li>
-                <li>BMI323 IMU</li>
-                <li>ENS220 Temperature Sensor</li>
+                <li>HTerm</li>
+                <li>ICM40609 IMU</li>
+                <li>ENS220 Barometer Sensor</li>
+                <li>MMC5983MA Magnetometer</li>
+                <li>ExpressLRS EP1 Module</li>
                 <li>Git / Version Control</li>
                 <li>Oscilloscope & Logic Analyzer for debugging</li>
             </ul>

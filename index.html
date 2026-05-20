@@ -27,8 +27,11 @@
     <img src="assets/images/intro_pic.jpg" alt="Background" class="intro-bg-image">
     <div class="intro-content">
         <h1>Jessica Reiff</h1>
-        <p>Hi! I’m Jessica, a Senior Electrical Engineering student at Iowa State University 
-            with a passion for embedded systems, controls, and all things hands-on.</p>
+        <p> 
+            Hi! I’m Jessica, a Senior Electrical Engineering student at Iowa State University
+            focused on embedded systems, robotics, sensor fusion, and real-time control systems
+            for autonomous platforms
+        </p>
         <div class="intro-buttons">
             <a href="#projects" class="btn">View Projects</a>
             <a href="#contact" class="btn">Contact Me</a>
@@ -58,7 +61,7 @@
                 <li>Trying new hobbies and challenges, curiosity keeps me going!</li>
             </ul>
             <p>I love blending creativity with technical skills, whether that’s designing a quirky cow-shaped PCB, 
-                building a UAV flight controller, or developing a new control algorithm. I believe that problem-solving 
+                building embedded flight control systems, or developing a new control algorithm. I believe that problem-solving 
                 is not just a skill, it’s a way to explore the world and learn something new every day.
             </p>
         </div>
@@ -150,6 +153,21 @@
                 <a href="projects/senior_design.html" class="btn">Learn More</a>
             </div>
 
+         <!-- CPRE 3080 Final Project/ Project 2 -->
+            <div class="project-card">
+                <h3>Mini-KV Final Project</h3>
+                <img src="assets/images/minikv_architecture_diagram.svg" alt="3080 Proj Block Diagram">
+                <p class="project-date">April 2026</p>
+                <p class="project-description">
+                    A multi-threaded in-memory key-value store server built in C, inspired by 
+                    systems like Redis. Features a thread pool with producer-consumer 
+                    synchronization, a reader-writer locked hash table for concurrent access, 
+                    TTL-based key expiration via a background sweeper thread, and a live STATS 
+                    command, all served over TCP.
+                </p>
+                <a href="projects/cpre3080.html" class="btn">Learn More</a>
+            </div>
+
         <!-- EE 3330 UAV Flight Controller -->
             <div class="project-card">
                 <h3>EE 3330 Final Project: UAV Flight Controller</h3>
@@ -223,10 +241,107 @@
 <!-- RESUME -->
 <section id="resume" class="section resume">
     <h2>Resume</h2>
-    <p>Here is a brief overview of my skills and experience. You can also download my full resume below.</p>
+    <p>    
+        My technical experience focuses on embedded firmware, robotics,
+        sensor fusion, and real-time control systems for autonomous platforms.Here is a brief overview 
+        of my skills and experience. You can also download my full resume below. All the icon image attributions can be seen in the citation tab of the page.
+    </p>
 
     <!-- Technical Skills -->
     <div class="skills-container">
+
+        <!-- Embedded Systems and  Robotics -->
+        <div class="skills-category">
+            <h4>Embedded Systems and Robotics</h4>
+            <div class="skills-list">
+                <div class="skill-box">
+                    <img src="assets/images/circuit.png" alt="STM Icon">
+                    STM32
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/oscilloscope.png" alt="Oscilloscope Icon">
+                    FreeRTOS
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/gyroscope.png" alt="Gyroscope Icon">
+                    Sensor Fusion
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/vector.png" alt="Vector Icon">
+                    Quaternion Math
+                </div>
+                 <div class="skill-box">
+                    <img src="assets/images/3DSpace.png" alt="3DSpace Icon">
+                    Madgwick AHRS
+                </div>
+                 <div class="skill-box">
+                    <img src="assets/images/timer.png" alt="Timer Icon">
+                    Real-time Systems
+                </div>
+                 <div class="skill-box">
+                    <img src="assets/images/MCUBlue.png" alt="MCU Icon">
+                    Embedded Firmware Development
+                </div>
+            </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="skills-category">
+            <h4>Programming Languages</h4>
+            <div class="skills-list">
+                <div class="skill-box">
+                    <img src="assets/images/c.png" alt="C Icon">
+                    C/C++
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/rosBlue.png" alt="ROS 2 Icon">
+                    ROS 2
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/vhdl.png" alt="VHDL Icon">
+                    VHDL
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/verilog.png" alt="Verilog Icon">
+                    Verilog
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/matlab.png" alt="MATLAB Icon">
+                    MATLAB/Simulink
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/python.png" alt="Python Icon">
+                    Python
+                </div>
+            </div>
+        </div>
+
+        <!-- Communication Protocols -->
+        <div class="skills-category">
+            <h4>Communication Protocols</h4>
+            <div class="skills-list">
+                <div class="skill-box">
+                    <img src="assets/images/spiArrows.png" alt="SPIArrows Icon">
+                    SPI
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/spiArrows.png" alt="SPIArrows Icon">
+                    I2C
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/spiArrows.png" alt="SPIArrows Icon">
+                    UART
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/USB.png" alt="USB Icon">
+                    USB
+                </div>
+                 <div class="skill-box">
+                    <img src="assets/images/radioWaves.png" alt="radioWaves Icon">
+                    ExpressLRS
+                </div>
+            </div>
+        </div>
 
         <!-- Hardware & Lab -->
         <div class="skills-category">
@@ -247,37 +362,6 @@
                 <div class="skill-box">
                     <img src="assets/images/soldering.png" alt="Soldering Icon">
                     Soldering
-                </div>
-            </div>
-        </div>
-
-        <!-- Programming Languages -->
-        <div class="skills-category">
-            <h4>Programming Languages</h4>
-            <div class="skills-list">
-                <div class="skill-box">
-                    <img src="assets/images/c.png" alt="C Icon">
-                    C/C++
-                </div>
-                <div class="skill-box">
-                    <img src="assets/images/ros.png" alt="ROS 2 Icon">
-                    ROS 2
-                </div>
-                <div class="skill-box">
-                    <img src="assets/images/vhdl.png" alt="VHDL Icon">
-                    VHDL
-                </div>
-                <div class="skill-box">
-                    <img src="assets/images/verilog.png" alt="Verilog Icon">
-                    Verilog
-                </div>
-                <div class="skill-box">
-                    <img src="assets/images/matlab.png" alt="MATLAB Icon">
-                    MATLAB/Simulink
-                </div>
-                <div class="skill-box">
-                    <img src="assets/images/python.png" alt="Python Icon">
-                    Python
                 </div>
             </div>
         </div>
@@ -305,6 +389,14 @@
                 <div class="skill-box">
                     <img src="assets/images/questasim.png" alt="Questasim Icon">
                     QuestaSim
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/stm32IDE.png" alt="STM32CubeIDE Icon">
+                    STM32CubeIDE
+                </div>
+                <div class="skill-box">
+                    <img src="assets/images/github.png" alt="Github Icon">
+                    Git
                 </div>
             </div>
         </div>

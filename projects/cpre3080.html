@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CprE 3080 Project: Mini-KV — Multi-Threaded Key-Value Store</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Custom styling for this page only */
+        .project-top img {
+            max-width: 400px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <ul>
+        <li><a href="../index.html#intro">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#resume">Resume</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../reflections.html">Reflections</a></li>
+        <li><a href="../attributes.html">Citations</a></li>
+    </ul>
+</nav>
+
+<!-- PROJECT DETAIL SECTION -->
+<section class="section project-detail">
+
+    <h2>CprE 3080 Project: Mini-KV</h2>
+    <p class="project-date">April 2026 – May 2026</p>
+
+    <!-- Top section: image placeholder + short description -->
+    <div class="project-top">
+        <!-- Replace with an actual screenshot or diagram if you have one -->
+        <img src="../assets/images/minikv_architecture_diagram.svg" alt="Mini-KV Key-Value Store Diagram">
+        <p>
+            Mini-KV is a multi-threaded, in-memory key-value store server built in C for CprE 3080 
+            (Operating Systems). Inspired by real-world systems like Redis and Memcached, the server 
+            handles concurrent TCP clients using a fixed thread pool, stores data in a chained hash table 
+            protected by reader-writer locks, and reclaims expired entries via a background sweeper thread.
+            <br><br>
+            GitHub: 
+            <a href="https://github.com/jreiff627/minikv" target="_blank">
+                github.com/jreiff627/minikv
+            </a>
+        </p>
+    </div>
+
+    <!-- Details section -->
+    <div class="project-info">
+
+        <!-- Project Overview -->
+        <div class="project-section">
+            <h3>Project Overview</h3>
+            <p>
+                The goal of Mini-KV was to compose core OS primitives: TCP sockets, thread pools, 
+                mutexes, condition variables, and reader-writer locks; into a working, concurrent 
+                network service. The server accepts line-delimited text commands (GET, PUT, DEL, STATS, QUIT) 
+                over TCP and responds with structured output, including optional TTL-based key expiration.
+            </p>
+            <ul>
+                <li>Built a sequential TCP server with a custom hash table (chaining) as a foundation</li>
+                <li>Extended to a concurrent model using a fixed-size worker thread pool and bounded work queue</li>
+                <li>Protected shared state with <code>pthread_rwlock_t</code> for correct concurrent access</li>
+                <li>Implemented TTL expiration via a background sweeper thread running on a configurable interval</li>
+                <li>Tracked server statistics (hits, misses, puts, dels, active connections, uptime)</li>
+            </ul>
+        </div>
+
+        <!-- Technical Implementation -->
+        <div class="project-section">
+            <h3>Technical Implementation</h3>
+            <ul>
+                <li>TCP socket server with accept loop dispatching connections to a bounded FIFO work queue</li>
+                <li>Producer-consumer synchronization using one mutex and two condition variables</li>
+                <li>Chained hash table with configurable bucket count, passed at startup via command line</li>
+                <li>Single table-wide <code>pthread_rwlock_t</code>: read-locked for GET, write-locked for PUT/DEL</li>
+                <li>Atomic statistics counters using <code>stdatomic.h</code> for lock-free stat tracking</li>
+                <li>Background sweeper thread scanning for expired TTL entries on a configurable interval</li>
+                <li>Clean shutdown on SIGINT: drains the queue, joins all threads, frees all memory</li>
+                <li>Concurrent benchmark client (<code>bench_client.c</code>) for throughput testing with configurable read/write ratios</li>
+            </ul>
+        </div>
+
+        <!-- Design Decisions -->
+        <div class="project-section">
+            <h3>Key Design Decisions</h3>
+
+            <p><strong>Lock Granularity</strong><br>
+                I used a single table-wide reader-writer lock rather than per-bucket locks. This simplified 
+                implementation significantly and avoided lock-ordering bugs. Under the 90% read workload 
+                used in benchmarking, concurrent GETs ran in parallel effectively. The tradeoff is that 
+                write operations (PUT/DEL) block the entire table — bucket-level locking would improve 
+                write throughput at the cost of added complexity.
+            </p>
+
+            <p><strong>Worker Pool Sizing</strong><br>
+                Benchmarking with 1, 4, 8, and 16 workers showed throughput scaling well up to the core 
+                count of the test machine, then plateauing. Beyond that point, context switching and 
+                lock contention on the work queue offset the gains from additional threads.
+            </p>
+
+            <p><strong>Sweeper Coordination</strong><br>
+                The sweeper acquires the write lock per-bucket rather than for the entire sweep pass, 
+                reducing the window during which all readers are blocked. This prevents the sweeper 
+                from freezing the server during large table scans while still guaranteeing consistent 
+                deletion.
+            </p>
+        </div>
+
+        <!-- Skills / Knowledge Gained -->
+        <div class="project-section">
+            <h3>Skills & Knowledge Gained</h3>
+            <ul>
+                <li>Systems programming in C (POSIX threads, BSD sockets)</li>
+                <li>Concurrent data structure design and thread safety</li>
+                <li>Producer-consumer synchronization with bounded queues</li>
+                <li>Reader-writer locking and reasoning about lock granularity</li>
+                <li>Background thread coordination and clean shutdown patterns</li>
+                <li>Performance benchmarking and throughput analysis</li>
+                <li>Memory management and leak-free design (validated with Valgrind)</li>
+                <li>Makefile-based build systems</li>
+            </ul>
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div class="project-section">
+            <h3>Tools & Technologies</h3>
+            <ul>
+                <li>C (C11 standard)</li>
+                <li>POSIX Threads (<code>pthreads</code>)</li>
+                <li>BSD TCP Sockets</li>
+                <li>Valgrind (memory leak and error checking)</li>
+                <li>GCC with <code>-Wall -Wextra -pthread</code></li>
+                <li>Linux (Iowa State Coover 2061 lab workstations)</li>
+                <li>Git / GitHub</li>
+                <li>Makefile build system</li>
+            </ul>
+        </div>
+
+        <!-- Impact -->
+        <div class="project-section">
+            <h3>Project Impact</h3>
+            <p>
+                Mini-KV bridges the gap between OS theory and real-world systems engineering. 
+                Building a Redis-style server from scratch: handling concurrent clients, managing 
+                shared state safely, and coordinating background threads; gave me hands-on experience 
+                with the exact primitives used in production infrastructure. This project demonstrates 
+                that my engineering skills extend beyond hardware and firmware into robust software 
+                systems design.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h3>System Architecture: Explained Simply</h3>
+            <p>Here's an analogy-based breakdown of how the concurrent 
+            architecture works under the hood:</p>
+            <img src="../assets/images/308StoryBoard.png" 
+                alt="Mini-KV architecture storyboard" 
+                style="max-width: 100%; border-radius: 8px;">
+</div>
+
+    </div>
+
+    <a href="../index.html#projects" class="btn">Back to Projects</a>
+</section>
+
+</body>
+</html>
