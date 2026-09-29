@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CprE 4880 — FPGA Systems & Embedded Design</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Custom styling for this page only */
+        .project-top img {
+            max-width: 500px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <ul>
+        <li><a href="../index.html#intro">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#resume">Resume</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../reflections.html">Reflections</a></li>
+        <li><a href="../attributes.html">Citations</a></li>
+    </ul>
+</nav>
+
+<!-- PROJECT DETAIL SECTION -->
+<section class="section project-detail">
+
+    <h2>CprE 4880 — FPGA Systems & Embedded Design</h2>
+    <p class="project-date">Spring 2026 · Iowa State University</p>
+
+    <!-- Top section: image placeholder + short description -->
+    <div class="project-top">
+        <!-- Replace with a representative course/project image -->
+        <img src="../assets/images/cpre4880.jpg"
+             alt="CprE 4880 FPGA Systems and Embedded Design">
+
+        <p>
+            CprE 4880 was a hands-on FPGA systems course focused on designing
+            embedded systems across both hardware and software. Throughout the
+            course, I worked directly with an FPGA development platform on
+            projects involving video, game emulation, image processing,
+            control systems, and real-time audio processing.
+            <br><br>
+            The course provided experience with FPGA hardware/software
+            co-design, processor systems, custom logic, DMA, memory interfaces,
+            and real-time data processing.
+        </p>
+    </div>
+
+    <!-- Details section -->
+    <div class="project-info">
+
+        <!-- Course Overview -->
+        <div class="project-section">
+            <h3>Course Overview</h3>
+
+            <p>
+                The course focused on building complete embedded systems using
+                programmable logic and an embedded processor. Projects combined
+                hardware design with software running on the processor system,
+                requiring both system-level integration and debugging.
+            </p>
+
+            <ul>
+                <li>Designed and tested systems using an FPGA development board</li>
+                <li>Worked with Vivado and Vitis for hardware and software development</li>
+                <li>Integrated processor-system peripherals and programmable logic</li>
+                <li>Worked with AXI interfaces, DMA, DDR memory, and video pipelines</li>
+                <li>Implemented real-time signal and image processing systems</li>
+            </ul>
+        </div>
+
+
+        <!-- MP-0 -->
+        <div class="project-section">
+            <h3>MP-0 — VGA & NES Emulation</h3>
+
+            <p>
+                MP-0 introduced FPGA-based video systems and processor/programmable
+                logic integration through an NES emulation project. The system
+                used the Zynq processing system to configure peripherals and
+                generated video data in the FPGA before moving video frames
+                through DDR memory using AXI VDMA for HDMI/VGA output.
+            </p>
+
+            <ul>
+                <li>Configured the Zynq Processing System and peripheral interfaces</li>
+                <li>Used AXI GPIO for buttons, switches, and LEDs</li>
+                <li>Configured VDMA and framebuffer memory for video output</li>
+                <li>Displayed NES video at 640×480 with scaling and centering</li>
+                <li>Implemented an interactive menu for selecting NES games</li>
+                <li>Created custom VHDL IP for NES/SNES-style controller input</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="../assets/cpre488_materials/cpre488_mp0.pdf"
+                    class="btn"
+                    target="_blank">
+                    View Report
+                </a>
+
+                <a href="../assets/videos/cpre488_mp0.mp4"
+                class="btn"
+                target="_blank">
+                    Watch Demo
+                </a>
+            </div>
+        </div>
+
+        <!-- MP-1 -->
+        <div class="project-links">
+            <a href="../assets/cpre488_materials/cpre488_mp1.pdf"
+            class="btn"
+            target="_blank">
+                View Report
+            </a>
+
+            <a href="../assets/videos/cpre488_mp1.mp4"
+            class="btn"
+            target="_blank">
+                Watch Demo
+            </a>
+        </div>
+
+
+        <!-- MP-2 -->
+        <div class="project-section">
+            <h3>MP-2 — FPGA Image Processing</h3>
+
+            <p>
+                MP-2 focused on building an FPGA-based camera and image
+                processing pipeline. The system captured camera data,
+                transferred video frames through DDR memory using AXI VDMA,
+                and output the processed video through HDMI.
+            </p>
+
+            <ul>
+                <li>Worked with camera sensor data and Bayer-pattern imaging</li>
+                <li>Converted Bayer-pattern data into color video</li>
+                <li>Implemented software-based color conversion</li>
+                <li>Built an FPGA image-processing pipeline</li>
+                <li>Worked with AXI-Stream video and DDR frame storage</li>
+                <li>Measured approximately 30 FPS from the hardware image-processing pipeline</li>
+            </ul>
+
+            <!-- MP-2 -->
+            <div class="project-links">
+                <a href="../assets/cpre488_materials/cpre488_mp2.pdf"
+                class="btn"
+                target="_blank">
+                    View Report
+                </a>
+
+                <a href="../assets/videos/cpre488_mp2.mp4"
+                class="btn"
+                target="_blank">
+                    Watch Demo
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Final Project -->
+        <div class="project-section">
+            <h3>Final Project — Real-Time FPGA Audio FFT</h3>
+
+            <p>
+                For the final project, my team built an FPGA-based real-time
+                audio processing system capable of capturing live audio,
+                performing FFT analysis, outputting processed audio, and
+                displaying frequency-domain information through a GUI.
+            </p>
+
+            <ul>
+                <li>Integrated an ADAU1761 audio codec using I²S</li>
+                <li>Configured the audio codec through register-level I²C communication</li>
+                <li>Used DMA to transfer audio data between the processing system and DDR memory</li>
+                <li>Implemented FFT analysis using KISS FFT</li>
+                <li>Applied DC-offset removal and Hann windowing before FFT processing</li>
+                <li>Implemented a triple-buffer Zip/Zap/Zop DMA pipeline</li>
+                <li>Built a real-time spectrum analyzer GUI</li>
+            </ul>
+
+            <!-- Final Project -->
+            <div class="project-links">
+                <a href="../assets/cpre488_materials/cpre488_final_proj.pdf"
+                class="btn"
+                target="_blank">
+                    View Report
+                </a>
+
+                <a href="../assets/videos/cpre488_final_proj.mp4"
+                class="btn"
+                target="_blank">
+                    Watch Demo
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Technical Skills -->
+        <div class="project-section">
+            <h3>Skills & Knowledge Gained</h3>
+
+            <ul>
+                <li>FPGA-based embedded system design</li>
+                <li>Hardware/software co-design</li>
+                <li>VHDL and custom FPGA logic</li>
+                <li>Processor-system and peripheral integration</li>
+                <li>AXI interfaces and DMA</li>
+                <li>DDR memory and framebuffer management</li>
+                <li>Real-time image and audio processing</li>
+                <li>Digital signal processing and FFT analysis</li>
+                <li>Embedded system debugging and testing</li>
+            </ul>
+        </div>
+
+
+        <!-- Tools & Technologies -->
+        <div class="project-section">
+            <h3>Tools & Technologies</h3>
+
+            <ul>
+                <li>FPGA Development Board</li>
+                <li>Vivado</li>
+                <li>Vitis</li>
+                <li>VHDL</li>
+                <li>C/C++</li>
+                <li>Zynq Processing System</li>
+                <li>AXI GPIO</li>
+                <li>AXI VDMA</li>
+                <li>DMA</li>
+                <li>DDR Memory</li>
+                <li>I²C</li>
+                <li>I²S</li>
+                <li>HDMI / VGA</li>
+                <li>KISS FFT</li>
+                <li>Git</li>
+            </ul>
+        </div>
+
+
+        <!-- Overall Takeaway -->
+        <div class="project-section">
+            <h3>Overall Takeaway</h3>
+
+            <p>
+                CprE 4880 gave me hands-on experience designing embedded systems
+                that combine hardware and software rather than treating them as
+                separate components. Working through video, game emulation,
+                image processing, control, and real-time audio projects gave me
+                experience integrating FPGA logic, processor software, memory,
+                peripherals, and real-time data pipelines into complete systems.
+            </p>
+
+            <p>
+                The course strengthened my interest in embedded systems and
+                hardware/software integration and gave me experience that
+                directly complements my work in firmware, robotics, and
+                autonomous systems.
+            </p>
+        </div>
+
+
+        <!-- Course Materials -->
+        <div class="project-section">
+            <h3>Course Materials</h3>
+
+            <p>
+                This course included detailed project reports, presentations,
+                and demonstration videos documenting each project.
+            </p>
+
+            <div class="project-links">
+                <a href="#" class="btn">View Reports</a>
+                <a href="#" class="btn">View Presentations</a>
+                <a href="#" class="btn">Watch Demos</a>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="../index.html#projects" class="btn">Back to Projects</a>
+
+</section>
+
+
+</body>
+</html>
+
